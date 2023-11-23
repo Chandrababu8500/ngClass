@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>NgStyle Binding</h2>
+    <dl>
+        <dt>background</dt>
+        <dd>
+            <select [(ngModel)]="bgStyle">
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="yellow">yellow</option>
+                <option value="pink">pink</option>
+            </select>
+        </dd>
+        <dt>TextColor</dt>
+        <dd>
+            <select [(ngModel)]="textStyle">
+                <option value="green">Green</option>
+                <option value="tomato">tomato</option>
+                <option value="yellow">yellow</option>
+                <option value="pink">pink</option>
+            </select>
+        </dd>
+        <dt>Padding</dt>
+        <dd>
+            1px<input type="range" [(ngModel)]="paddingStyle" name="" min="1" max="50" id="">50px
+        </dd>
+    </dl>
+    <dt>FontSize</dt>
+    <dd>
+        1px<input type="range" [(ngModel)]="fontSize" name="" id="" min="1" max="50">50px
+    </dd>
+    <div>
+        <button (click)="applyStyle()" class="btn btn-success">appkyStyle</button>
+    </div>
+    <div>
+        <h1 [ngStyle]="styleObj">NgStyle Apply</h1>
+    </div>
+</div>
