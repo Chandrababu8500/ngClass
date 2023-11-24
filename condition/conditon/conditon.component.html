@@ -1,0 +1,41 @@
+<div class="container">
+ <div class="row mt-4">
+  <div class="col-2">
+    <div class="btn-group-vertical">
+      <button (click)="ViewClick('details')" class="btn btn-primary mt-2">details</button>
+      <button (click)="ViewClick('preview')" class="btn btn-primary mt-2">preview</button>
+      <button (click)="ViewClick('offers')" class="btn btn-primary mt-2">offers</button>
+      <button (click)="ViewClick('Order')" class="btn btn-primary mt-2">Order</button>
+    </div>
+    <div class="mt-4">
+      <select [(ngModel)]="ViewName" name="name" id="" class="form-select">
+        <option value="details">BasicDetails</option>
+        <option value="preview">preview</option>
+        <option value="offers">offers</option>
+        <option value="Order">Order</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-10">
+ <div [ngSwitch]="ViewName">
+    <div *ngSwitchCase="'details'">
+          <h2>Show Details</h2>
+          <p><img src="https://th.bing.com/th?id=ORMS.eea4e51cc12bd95da8076a561ae4e9a4&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1.25&p=0" width="200" height="200" alt=""></p>
+          <span class="bi bi-star-fill text-primary"></span>
+          <span class="bi bi-star-fill text-primary"></span>
+          <span class="bi bi-star-fill text-primary"></span>
+          <span class="bi bi-star-fill text-primary"></span>
+    </div>
+    <div *ngSwitchCase="'preview'">
+      <h2>Show preview</h2>
+    </div>
+    <div *ngSwitchCase="'offers'">
+      <h2>Show offers</h2>
+    </div>
+    <div *ngSwitchCase="'Order'">
+      <h2>Show Order</h2>
+    </div>
+ </div>
+  </div>
+ </div>
+</div>
