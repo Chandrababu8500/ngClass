@@ -1,0 +1,13 @@
+.bg-Style{
+    background-color: green;
+    padding: 10px;
+}
+.text-Style{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: yellowgreen;
+}
+.border-Style{
+    border-radius:30px;
+    border-color: chartreuse;
+}

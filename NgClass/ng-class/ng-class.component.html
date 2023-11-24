@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <div>
+        <input type="checkbox" name="" ngModel #bgColor="ngModel" id="">
+        <span>bgColor</span>
+    </div>
+    <div>
+        <input type="checkbox" ngModel #textInfo="ngModel" name="" id="">
+        <span>textInfo</span>
+    </div>
+    
+    <div>
+        <input type="checkbox" ngModel #backgroundInfo="ngModel" name="" id="">
+        <span>backgroundInfo</span>
+    </div> 
+</div>
+<div>
+    <h2 class="text-center" [ngClass]="{'bg-Style':bgColor.value,'text-Style':textInfo.value,'border-Style':backgroundInfo.value}">ngClassess applied</h2>
+</div>
